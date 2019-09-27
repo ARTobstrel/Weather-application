@@ -1,14 +1,10 @@
 import React from 'react';
 
-class Info extends React.Component {
-    render() {
-        return (
-            <article>
-                <h2>weather application</h2>
-                <p>find out the weather in the city</p>
-            </article>
-        )
-    }
-}
+const Info = () => (
+    <div className='application_title'>
+        <h1 className='application_title__h1'>Weather application</h1>
+        <h3 className='application_title__h3'>Find out the weather in the city</h3>
+    </div>
+);
 
 export default Info

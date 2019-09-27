@@ -1,0 +1,108 @@
+.main_frame {
+    border: 2px solid #1727ff;
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    background: rgb(234, 241, 248);
+    box-shadow: 0px 0px 10px 10px rgb(97, 177, 234);
+    display: flex;
+    overflow: hidden;
+}
+
+.title_frame {
+    max-height: 100%;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(164, 179, 87, 1);
+    background: -moz-linear-gradient(45deg, rgba(164, 179, 87, 1) 0%, rgba(117, 137, 12, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(164, 179, 87, 1) 0%, rgba(117, 137, 12, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(164, 179, 87, 1) 0%, rgba(117, 137, 12, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(164, 179, 87, 1) 0%, rgba(117, 137, 12, 1) 100%);
+    background: linear-gradient(45deg, rgba(164, 179, 87, 1) 0%, rgba(117, 137, 12, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4b357', endColorstr='#75890c', GradientType=1);
+}
+
+.application_title {
+    font-size: 14px;
+}
+
+.application_title__h3 {
+    margin-top: 20px;
+}
+
+.info_frame {
+    flex-grow: 3;
+    margin: 120px auto;
+    background-color: transparent;
+
+
+}
+
+.weather_form {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.weather_form__container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.weather_form__container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 32px;
+    width: 50%;
+    height: 2px;
+    background-color: #000000;
+
+}
+
+.weather_form__input {
+    height: 30px;
+    font-size: 22px;
+    background-color: transparent !important;
+}
+
+.weather_form__btn {
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #7083ff;
+    /*border: 2px solid #000000;*/
+    color: #000;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 0 0 2px 2px #000;
+}
+
+.weather_info {
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 820px) {
+    body {
+        display: block;
+    }
+
+    .main_frame {
+        margin: 10px auto;
+        max-width: 90%;
+        height: 95vh;
+        flex-direction: column;
+    }
+
+    .info_frame {
+        display: block;
+    }
+
+    .weather_form__btn {
+        font-size: 16px;
+    }
+}
