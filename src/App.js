@@ -12,6 +12,7 @@ const API_KEY = "82b797b6ebc625032318e16f1b42c016";
 class App extends React.Component {
 
     state = {
+        icon: undefined,
         temp: undefined,
         city: undefined,
         country: undefined,
@@ -34,9 +35,10 @@ class App extends React.Component {
                 let sunset = data.sys.sunset;
                 let date = new Date();
                 date.setTime(sunset);
-                let sunset_date = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+                let sunset_date = `${("0"+date.getHours()).slice(-2)}:${("0"+date.getMinutes()).slice(-2)}:${("0"+date.getSeconds()).slice(-2)}`;
 
                 this.setState({
+                    icon: data.weather[0].icon,
                     temp: data.main.temp,
                     city: data.name,
                     country: data.sys.country,
@@ -44,10 +46,10 @@ class App extends React.Component {
                     sunset: sunset_date,
                     error: undefined
                 });
-                console.log(this.state);
-                // console.log(sunset_date)
+                console.log(this.state.icon);
             } else {
                 this.setState({
+                    icon: undefined,
                     temp: undefined,
                     city: undefined,
                     country: undefined,
@@ -58,6 +60,7 @@ class App extends React.Component {
             }
         } else {
             this.setState({
+                icon: undefined,
                 temp: undefined,
                 city: undefined,
                 country: undefined,
